@@ -1,0 +1,45 @@
+{
+   "name": "uptime-monitor-cronjob",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "engines": {
+      "node": "14.* || >=16.*"
+   },
+   "devDependencies": {
+      "@types/node": "^16.11.10",
+      "ts-node": "10.7.0",
+      "typescript": "4.5.2"
+   },
+   "dependencies": {
+      "@grpc/grpc-js": "~1.7.3",
+      "axios": "^1.2.2",
+      "axios-ntlm": "^1.3.1",
+      "cacheable-lookup": "~6.0.4",
+      "chardet": "^1.5.1",
+      "chroma-js": "^2.4.2",
+      "crypto": "^1.0.1",
+      "dayjs": "^1.11.7",
+      "dns2": "^2.0.5",
+      "dotenv": "^16.0.3",
+      "iconv-lite": "^0.6.3",
+      "mqtt": "^4.3.7",
+      "mssql": "^9.0.1",
+      "mysql2": "^3.0.1",
+      "node-radius-client": "^1.0.0",
+      "node-radius-utils": "^1.2.0",
+      "pg": "^8.8.0",
+      "pg-connection-string": "^2.5.0",
+      "ping": "~0.4.2",
+      "protobufjs": "^7.1.2",
+      "reflect-metadata": "^0.1.13",
+      "socks-proxy-agent": "^7.0.0",
+      "tcp-ping": "^0.1.1",
+      "typeorm": "0.3.11"
+   },
+   "scripts": {
+      "start": "ts-node src/index.ts",
+      "typeorm": "typeorm-ts-node-commonjs",
+      "seed:run": "ts-node src/seed/index.ts",
+      "seed": "ts-node src/seed/index.ts"
+   }
+}

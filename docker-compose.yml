@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  monitor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cronjob
+    restart: unless-stopped
+    environment:
+      DATABASE_ENDPOINT: ${DATABASE_ENDPOINT}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_USER: ${DATABASE_USER}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_TYPE: ${DATABASE_TYPE}
+    volumes:
+      - .:/home/node/app
+      - /node_modules
+    network_mode: host
